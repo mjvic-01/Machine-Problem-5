@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sort the Array</title>
+    <title>Sort the Array</title>
 </head>
 <body>
-<h2>Activity 3: Sort the Entered Array</h2>
-<script>
-   let numbers = [40, 10, 50, 20, 30];
-   document.write("<b>Original Array:</b><br>");
-   for (let i = 0; i < numbers.length; i++) {
-       document.write("Index " + i + ": " + numbers[i] + "<br>");
-   }
-   for (let i = 0; i < numbers.length - 1; i++) {
-       for (let j = 0; j < numbers.length - 1; j++) {
-           if (numbers[j] > numbers[j + 1]) {
-               let temp = numbers[j];
-               numbers[j] = numbers[j + 1];
-               numbers[j + 1] = temp;
-           }
-       }
-   }
-   document.write("<br><b>Sorted Array:</b><br>");
-   for (let i = 0; i < numbers.length; i++) {
-       document.write("Index " + i + ": " + numbers[i] + "<br>");
-   }
-</script>
+    <h2>Activity 3: Sort the Entered Array</h2>
+    <script>
+        let numbers = [40, 10, 50, 20, 30];
+        document.write("<b>Original Array:</b><br>");
+        for (let i = 0; i < numbers.length; i++) {
+            document.write("Index " + i + ": " + numbers[i] + "<br>");
+        }
+        for (let i = 0; i < numbers.length - 1; i++) {
+            for (let j = 0; j < numbers.length - 1 - i; j++) {
+                if (numbers[j] > numbers[j + 1]) {   
+                    let temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
+                }
+            }
+        }
+        document.write("<br><b>Sorted Array:</b><br>");
+        for (let i = 0; i < numbers.length; i++) {
+            document.write("Index " + i + ": " + numbers[i] + "<br>");
+        }
+    </script>
 </body>
 </html>
