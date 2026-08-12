@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Search for a Value</title>
+    <title>Search for a Value</title>
 </head>
 <body>
-<h2>Activity 2: Search for a Value</h2>
-<script>
-   let numbers = [10, 20, 30, 40, 50];
-   document.write("Array: " + numbers + "<br><br>");
-   let search = Number(prompt("Enter a value to search:"));
-   let found = false;
-   for (let i = 0; i < numbers.length; i++) {
-       if (numbers[i] === search) {
-           document.write("Value found: " + numbers[i] + "<br>");
-           document.write("Index: " + i);
-           found = true;
-           break;
-       }
-   }
-   if (found === false) {
-       document.write("Value " + search + " was not found in the array.");
-   }
-</script>
+    <h2>Activity 2: Search for a Value</h2>
+    <script>
+        let numbers = [10, 20, 30, 40, 50];
+        document.write("Array: " + numbers + "<br><br>");
+        let search = Number(prompt("Enter a value to search:"));
+        let found = false;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] === search) {
+                document.write("Value found: " + numbers[i] + "<br>");
+                document.write("Index: " + i);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            document.write(
+                "Value " + search + " was not found in the array."
+            );
+        }
+    </script>
+
 </body>
 </html>
